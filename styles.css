@@ -1,0 +1,535 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gifts-section .icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.gifts-section {
+    text-align: center;
+}
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+.script-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    scroll-snap-align: start;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navegación de puntos */
+.nav-dots {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: #8a9a5b;
+    transform: scale(1.2);
+}
+
+/* Sección 1: Portada */
+.main-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.main-title h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.audio-player {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3px;
+}
+
+.play-button {
+    background-color: transparent;
+    border: none;
+    color: #8a9a5b;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seek-slider {
+    flex: 1;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #e5e7eb;
+    appearance: none;
+    cursor: pointer;
+}
+
+.seek-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #8a9a5b;
+    border-radius: 50%;
+}
+
+.seek-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #8a9a5b;
+    border-radius: 50%;
+    border: none;
+}
+
+.time {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.volume-icon {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.invitation-title {
+    color: #8a9a5b;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.invitation-text {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Sección 2: Cuenta regresiva */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #8a9a5b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    color: #777;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: #8a9a5b;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #7a8a4b;
+}
+
+.btn-outline {
+    background-color: #8a9a5b;
+    color: white;
+    border: 1px solid #8a9a5b;
+}
+
+.btn-outline:hover {
+    background-color: #7a8a4b;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Sección 3 y 4: Ceremonia y Celebración */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-circle i {
+    font-size: 1.5rem;
+    color: #8a9a5b;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.venue, .expectation, .address {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.date-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.date h3, .time h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ddd;
+}
+
+/* Sección 5: Galería */
+#section-5 {
+    background-color: #8a9a5b;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.gallery-item {
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección 6: Regalos y RSVP */
+.gifts-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.gifts-text, .rsvp-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rsvp-form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8a9a5b;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.radio-group {
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #8a9a5b;
+}
+
+.thank-you {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.thank-you h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.closing {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.closing h2 {
+    color: #8a9a5b;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.signature {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-dots {
+        display: none;
+    }
+    
+    .countdown-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    
+    .main-title h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-container {
+        gap: 10px;
+    }
+    
+    .countdown-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .date-time {
+        gap: 20px;
+    }
+    
+    .date h3, .time h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Scroll snap para navegación suave */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* Estilo mejorado para el anuncio importante - ocupando pantalla completa */
+#section-announcement {
+    min-height: 100vh; /* Cambiado de auto a 100vh para ocupar toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    background-color: #fdf6f0; /* Color de fondo para toda la sección */
+    padding: 0; /* Eliminar el padding para asegurar que ocupe toda la pantalla */
+}
+
+.announcement {
+    text-align: center;
+    background-color: white; /* Contraste con el fondo de la sección */
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid rgba(138, 154, 91, 0.2); /* Borde sutil con el color temático */
+}
+
+.announcement-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px; /* Título más grande */
+    color: #c47f6d; /* Color cálido */
+    margin-bottom: 15px;
+}
+
+.announcement-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #5a4d4d;
+    line-height: 1.6;
+}
+
+/* Estilo específico para móviles */
+@media (max-width: 768px) {
+    #section-announcement {
+        min-height: 100vh; /* Asegura que ocupa toda la pantalla también en móvil */
+    }
+    
+    .announcement {
+        width: 85%; /* Un poco más estrecho en móvil */
+    }
+    
+    .announcement-title {
+        font-size: 26px;
+    }
+    
+    .announcement-text {
+        font-size: 16px;
+    }
+}

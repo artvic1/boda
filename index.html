@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Juana & Victor Manuel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
+        rel="stylesheet">
+
+</head>
+<script src="https://kit.fontawesome.com/ceee124533.js" crossorigin="anonymous"></script>
+
+<body>
+    <!-- Navegación de puntos -->
+    <div class="nav-dots">
+        <button class="nav-dot active" data-section="0" aria-label="Ir a sección 1"></button>
+        <button class="nav-dot" data-section="1" aria-label="Ir a sección 2"></button>
+        <button class="nav-dot" data-section="2" aria-label="Ir a sección 3"></button>
+        <button class="nav-dot" data-section="3" aria-label="Ir a anuncio importante"></button>
+        <button class="nav-dot" data-section="4" aria-label="Ir a sección 4"></button>
+        <button class="nav-dot" data-section="5" aria-label="Ir a sección 5"></button>
+        <button class="nav-dot" data-section="6" aria-label="Ir a regalos"></button>
+        <button class="nav-dot" data-section="7" aria-label="Ir a confirmar asistencia"></button>
+    </div>
+
+    <!-- Reproductor de audio -->
+    <audio id="background-music" src="Sebastián Yatra - No hay nadie más  LETRA(MP3_160K).mp3" autoplay muted
+        loop></audio>
+
+    <!-- Sección 1: Portada -->
+    <section class="section" id="section-1">
+        <div class="container">
+            <div class="main-image">
+                <img src="juanayvic.jpg" alt="Juana y Victor Manuel">
+                <div class="overlay"></div>
+                <div class="main-title">
+                    <h1 class="script-font" style="font-size: 35px;">Juana & Victor Manuel</h1>
+                    <p style="font-family: Poppins, sans-serif;" class="uppercase">NOS CASAMOS</p>
+                </div>
+            </div>
+
+            <div class="audio-player">
+                <button id="play-button" class="play-button">
+                    <i class="ri-play-fill"></i>
+                </button>
+                <input type="range" id="seek-slider" min="0" max="100" value="0" class="seek-slider">
+                <span id="current-time" class="time">0:00</span>/<span id="duration" class="time">0:00</span>
+                <i class="ri-volume-up-line volume-icon"></i>
+            </div>
+
+            <h2 class="invitation-title script-font">¡Estás invitado!</h2>
+            <p style="font-family: Poppins, sans-serif;" class="invitation-text">
+                Nos encantaría que seas parte de este momento tan especial para nosotros. <br> ¡Falta poco!
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección 3: Ceremonia -->
+    <section class="section" id="section-3">
+        <div class="container">
+            <div class="icon-circle">
+                <i class="fa-solid fa-church"></i>
+            </div>
+            <h2 class="section-title">CEREMONIA</h2>
+            <p style="font-family: Poppins, sans-serif;" class="venue">Iglesia San Jose María Escriva de Balaguer</p>
+            <p style="font-family: Poppins, sans-serif;" class="expectation">Te esperamos el</p>
+
+            <div class="date-time">
+                <div class="date">
+                    <h3>08 DE JUNIO</h3>
+                </div>
+                <div class="divider"></div>
+                <div class="time">
+                    <h3>2:00 <span class="small">P.M.</span></h3>
+
+                </div>
+            </div>
+
+            <p style="font-family: Poppins, sans-serif;" class="address">Calle 32 AA # 107 - 50, Belen Aguas Frias</p>
+
+            <a href="https://www.google.com/maps/place/Parroquia+San+Josemar%C3%ADa+Escriv%C3%A1+de+Balaguer/@6.2343149,-75.6273293,451m/data=!3m1!1e3!4m6!3m5!1s0x8e442a2154a1cc29:0xcdda398950221ca9!8m2!3d6.2341939!4d-75.626639!16s%2Fg%2F11b7q7vt2h?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank">
+                <button class="btn btn-primary">
+                    <i class="ri-map-pin-line"></i> VER UBICACIÓN </button>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Anuncio Importante -->
+    <section class="section" id="section-announcement">
+        <div class="container">
+            <div class="announcement">
+                <h2 class="announcement-title">Un Mensaje Especial 💒</h2>
+                <p class="announcement-text">
+                    Para asistir a la celebración, nos parece muy importante que primero nos acompañes en la
+                    Ceremonia Eucarística. Es el momento más especial de nuestro día y queremos compartirlo contigo.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Celebración -->
+    <section class="section" id="section-4">
+        <div class="container">
+            <div class="icon-circle">
+                <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+            <h2 class="section-title">CELEBRACIÓN</h2>
+            <p style="font-family: Poppins, sans-serif;" class="venue">La recepción se realizará en el salón de eventos (Mi Casa Campestre - Turquesa) <br>  cerca a la estación del Metroplus La Palma.</p>
+
+            <div class="date-time">
+                <div class="date">
+                </div>
+                <div class="divider"></div>
+                <div class="time">
+                    <h3>4:00pm <span class="small">P.M.</span></h3>
+                </div>
+            </div>
+            <p style="font-family: Poppins, sans-serif;" class="address">Avenida 80 con Calle 30</p>
+
+            <a href="https://maps.app.goo.gl/mSBbNrvAHcYqGNt2A"
+                target="_blank">
+                <button class="btn btn-primary">
+                    <i class="ri-map-pin-line"></i> VER UBICACIÓN </button>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Sección 5: Galería -->
+    <section class="section" id="section-5">
+        <div class="container">
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="1 (1).jpeg" alt="Pareja">
+                </div>
+                <div class="gallery-item">
+                    <img src="1 (2).jpeg" alt="Pareja">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="1 (3).jpeg" alt="Pareja">
+                </div>
+                <div class="gallery-item">
+                    <img src="1 (4).jpeg" alt="Pareja">
+                </div>
+                <div class="gallery-item">
+                    <img src="5..jpeg" alt="Pareja">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección 6: Regalos -->
+    <section class="section" id="section-6">
+        <div class="container">
+            <div class="gifts-section">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <h2 class="section-title">REGALOS</h2>
+                <p style="font-family: Poppins, sans-serif;" class="gifts-text">
+                    Lo más importante es tu presencia,<br>
+                    pero si deseas hacernos un regalo<br>
+                    una lluvia de sobres seria recibida con mucho amor<br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 7: RSVP (Confirmar Asistencia) -->
+    <section class="section" id="section-7">
+        <div class="container">
+            <div class="rsvp-section">
+                <h2 class="section-title">CONFIRMAR ASISTENCIA</h2>
+                <p style="font-family: Poppins, sans-serif;" class="rsvp-text">
+                    Nota: Esta invitación es exclusiva para su remitente <br>
+                    Por favor, confirma tu asistencia<br>
+                    ¡Esperamos tu acompañamiento!
+                </p>
+
+                <form style="font-family: Poppins, sans-serif;" id="rsvp-form" class="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" placeholder="Escribe tu nombre" required>
+                    </div>
+
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="yes" name="attendance" value="yes" required>
+                            <label for="yes">Sí, allí estaré!</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="no" name="attendance" value="no">
+                            <label for="no">No podré asistir</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        ENVIAR RESPUESTA
+                    </button>
+                </form>
+
+                <div id="thank-you" class="thank-you hidden">
+                    <h3>¡Gracias por confirmar!</h3>
+                    <p>Hemos recibido tu respuesta.</p>
+                </div>
+
+                <div class="closing">
+                    <h2 style="font-family: Poppins, sans-serif; font-size: 20px;"    class="script-font">¡Te esperamos!</h2>
+                    <p style="font-size: 35px;" class="script-font signature">Juana & Victor Manuel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
